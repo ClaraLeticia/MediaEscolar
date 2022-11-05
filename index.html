@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title> </title>
+</head>
+
+<body> 
+    <form>
+        <table>
+            <thead>
+                <th>Materia</th>
+                <th>1° Bimestre</th>
+                <th>2° Bimestre</th>
+                <th>3° Bimestre</th>
+            </thead>
+            <tbody> 
+                <tr>
+                <td><input type="text" id="mat" ></td>
+                <td><input type="number" id="p" ></td>
+                <td><input type="number" id="s" ></td>
+                <td><input type="number" id="t" ></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="botao" onclick="media.exibir()" value="enviar"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+   <script type="text/javascript">
+    var media = new function(){
+        this.exibir=function(){
+            var mat = document.getElementById("mat").value;
+            var p = parseFloat(document.getElementById("p").value);
+            var s = parseFloat(document.getElementById("s").value);
+            var t = parseFloat(document.getElementById("t").value);
+            var media = 30 - (p + s + t);
+            alert("Você precisa de " + media + " pontos para passar em " + mat + "                              Gostodivc ;)");
+        }
+    }   
+        </script>
+</body>
+
+</html>
